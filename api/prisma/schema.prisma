@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./data/nextquest.db"
+}
+
+model User {
+  id            Int      @id @default(autoincrement())
+  name          String
+  email         String   @unique
+  password_hash String
+  role          String   @default("student")
+  subscriptionId Int?
+  ibanStudent   String?
+  acceptedCGU   Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Offer {
+  id              Int      @id @default(autoincrement())
+  title           String
+  companyName     String
+  byRole          String
+  location        String
+  lat             Float
+  lng             Float
+  description     String
+  capabilities    Json
+  createdBy      Int
+  createdAt      DateTime @default(now())
+  complianceStatus String   @default("ok")
+  status          String   @default("published")
+  promoShared     Boolean  @default(false)
+}
