@@ -11,7 +11,7 @@ COPY server.js ./
 COPY templates ./templates/
 
 # Installer les dépendances
-RUN npm ci --only=production
+RUN npm install --omit=dev
 
 # Exposer le port
 EXPOSE 3002
