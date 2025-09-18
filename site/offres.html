@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Quest - Offres</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo-nextquest.png" alt="Next Quest Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="offres.html">Offres</a></li>
+                <li><a href="etudiants.html">Étudiants</a></li>
+                <li><a href="entreprises.html">Entreprises</a></li>
+                <li><a href="particuliers.html">Particuliers</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <button id="theme-toggle-button">🌓</button>
+        </div>
+        <div class="account-modal">
+            <button id="account-button">Compte</button>
+        </div>
+    </header>
+    <main>
+        <section class="offers-controls">
+            <h1>Offres Disponibles</h1>
+            <div class="view-toggle">
+                <button id="list-view-button" class="active">Liste</button>
+                <button id="map-view-button">Carte</button>
+            </div>
+        </section>
+        <section id="offers-list" class="offers-list active">
+            <!-- Les offres seront chargées ici dynamiquement -->
+        </section>
+        <section id="offers-map" class="offers-map">
+            <div id="map"></div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="confidentialite.html">Politique de Confidentialité</a></li>
+            <li><a href="conditions.html">Conditions Générales</a></li>
+            <li><a href="contact.html">Nous contacter</a></li>
+            <li><a href="bug.html">Signaler un problème</a></li>
+        </ul>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/offers.js"></script>
+</body>
+</html>

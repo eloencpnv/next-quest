@@ -1,0 +1,10 @@
+# Changelog
+
+## 1.0.0 (2025-09-18)
+- Version initiale du projet.
+- Fonctionnalités :
+  - Authentification (JWT + 2FA OTP)
+  - Gestion des offres (liste/carte)
+  - Paiement par facture
+  - Modération légale suisse
+  - Documentation complète
